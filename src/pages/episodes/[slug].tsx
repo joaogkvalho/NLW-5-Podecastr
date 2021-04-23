@@ -8,6 +8,7 @@ import { api } from '../../services/api';
 
 import styles from './episode.module.scss'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 type Episode = {
@@ -33,9 +34,11 @@ export default function Episode({ episode }: EpisodeProps) {
     return (
         <div className={styles.episode}>
             <div className={styles.thumbnailContainer}>
-                <button type="button">
-                    <img src="/arrow-left.svg" alt="Voltar" />
-                </button>
+                <Link href="/">
+                    <button type="button">
+                        <img src="/arrow-left.svg" alt="Voltar" />
+                    </button>
+                </Link>
 
                 <Image
                     width={700}
@@ -56,9 +59,10 @@ export default function Episode({ episode }: EpisodeProps) {
                 <span>{episode.durationAsString}</span>
             </header>
 
-            <div>
-                {episode.description}
-            </div>
+            <div
+                className={styles.description}
+                dangerouslySetInnerHTML={{ __html: episode.description }}
+            />
         </div>
     )
 }
