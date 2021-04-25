@@ -10,6 +10,7 @@ import { convertDurationToTimeString } from '../utils/convertDurationToTimeStrin
 
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 
 import styles from './home.module.scss'
 
@@ -40,6 +41,10 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
 
   return (
     <div className={styles.homepage}>
+      <Head>
+        <title>Home | Podcastr</title>
+      </Head>
+
       <section className={styles.latestEpisodes}>
         <h2>Últimos lançamentos</h2>
 
