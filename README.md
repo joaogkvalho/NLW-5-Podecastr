@@ -1,4 +1,4 @@
-
+![NLW-5-Podcastr](https://user-images.githubusercontent.com/50122135/181507514-2941ee10-f618-4fbd-bb6f-9acf9081d048.png)
 
 > Status: Finished ✔️
 
